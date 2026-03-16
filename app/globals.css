@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Eurostile Extended - Commercial font: place woff2 files in /public/fonts/ */
+@font-face {
+  font-family: "Eurostile Extended";
+  src: url("/fonts/EurostileExtd-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Eurostile Extended";
+  src: url("/fonts/EurostileExtd-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Menda - Commercial font: place woff2 files in /public/fonts/ */
+@font-face {
+  font-family: "Menda";
+  src: url("/fonts/Menda-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Menda";
+  src: url("/fonts/Menda-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Menda";
+  src: url("/fonts/Menda-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-dm-sans: var(--font-dm-sans);
+  --font-rajdhani: var(--font-rajdhani);
+  --font-eurostile: "Eurostile Extended", "Rajdhani", sans-serif;
+  --font-menda: "Menda", var(--font-dm-sans), sans-serif;
+  --color-primary: #0037ff;
+  --color-dark-navy: #1c3446;
+  --color-dark: #041f34;
+  --color-yellow: #fedf01;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #fefefe;
+  color: #171717;
+  font-family: var(--font-dm-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+.font-eurostile {
+  font-family: "Eurostile Extended", var(--font-rajdhani), sans-serif;
+  font-weight: 900;
+}
+
+.font-menda {
+  font-family: "Menda", var(--font-dm-sans), sans-serif;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

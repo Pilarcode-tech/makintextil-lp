@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# screenshots and temp files
+/current-*.png
+/final-*.png
+/hero-*.png
+/footer-*.png
+/portfolio-*.png
+/quem-somos-*.png
+/screenshot-*.png
+/section-*.png
+/updated-*.png
+prompt.md
+.playwright-mcp/
