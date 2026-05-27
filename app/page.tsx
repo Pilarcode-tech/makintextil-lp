@@ -29,7 +29,7 @@ const projectCards = [
     category: "Manutenção Industrial",
     title: "Manutenção de Ramas",
     desc: "Manutenção e melhorias técnicas em ramas industriais, focadas em desempenho e confiabilidade.",
-    img: "/images/card-04.png",
+    img: "/images/ramas.png",
   },
   {
     num: "05",
@@ -154,18 +154,42 @@ const jsonLd = {
     "@type": "OfferCatalog",
     name: "Serviços Industriais",
     itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Manutenção e Instalações Industriais" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Paradas Programadas de Manutenção" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Caldeiraria Industrial" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Manutenção de Ramas" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Instalação de Máquinas" } },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Manutenção e Instalações Industriais",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Paradas Programadas de Manutenção",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Caldeiraria Industrial" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Manutenção de Ramas" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Instalação de Máquinas" },
+      },
     ],
   },
 };
 
 export default function Home() {
   return (
-    <main className="w-full overflow-x-hidden bg-[#fefefe] scroll-smooth" style={{ scrollPaddingTop: "120px" }}>
+    <main
+      className="w-full overflow-x-hidden bg-[#fefefe] scroll-smooth"
+      style={{ scrollPaddingTop: "120px" }}
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -173,7 +197,10 @@ export default function Home() {
       <Header />
 
       {/* ============ HERO SECTION ============ */}
-      <section id="inicio" className="relative w-full bg-[#041f34] pt-[100px] md:pt-[120px]">
+      <section
+        id="inicio"
+        className="relative w-full bg-[#041f34] pt-[100px] md:pt-[120px]"
+      >
         <div className="max-w-[1680px] mx-auto relative overflow-hidden">
           {/* Hero BG image — Figma: x=-11, y=-80, w=1696, h=1167 */}
           <div
@@ -194,13 +221,12 @@ export default function Home() {
               <div className="hidden xl:block w-[320px] h-[205px] rounded-[63px] border-[18px] border-[#fedf01] flex-shrink-0 -ml-[270px] mt-[10px]" />
 
               {/* Small image (blueprint) — Figma: x=136, y=258, w=157, h=224 */}
-              <div className="hidden lg:block relative w-[157px] h-[224px] flex-shrink-0">
+              <div className="hidden lg:block relative w-[211px] h-[186px] flex-shrink-0">
                 <Image
-                  src="/images/hero-small.png"
+                  src="/images/logo_makintextil.png"
                   alt=""
                   fill
-                  sizes="157px"
-                  className="object-cover brightness-0 invert"
+                  className=""
                 />
               </div>
 
@@ -371,14 +397,14 @@ export default function Home() {
       {/* Image overlaps half into the dark portfolio section below */}
       <div className="relative z-10 max-w-[1680px] mx-auto px-6 lg:px-[80px] -mb-[140px] lg:-mb-[194px]">
         <div className="relative w-full h-[280px] lg:h-[388px] rounded-[17px] overflow-hidden">
-            <Image
-              src="/images/about-overlay.png"
-              alt="Industrial facility"
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
+          <Image
+            src="/images/about-overlay.png"
+            alt="Industrial facility"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
       </div>
 
       {/* ============ PORTFOLIO DARK SECTION ============ */}
@@ -540,12 +566,7 @@ export default function Home() {
                   height={50}
                 />
               </div>
-              <Image
-                src="/icons/social-1.svg"
-                alt=""
-                width={50}
-                height={50}
-              />
+              <Image src="/icons/social-1.svg" alt="" width={50} height={50} />
             </div>
             <div className="flex flex-col lg:flex-row">
               {/* Left side */}
@@ -656,7 +677,10 @@ export default function Home() {
             <p className="font-rajdhani font-semibold text-[14px] text-black/50 uppercase">
               2026 © MakinTextil - Todos os Direitos reservados
             </p>
-            <a href="#inicio" className="font-rajdhani font-semibold text-[14px] text-black/50 uppercase cursor-pointer hover:text-black/70 transition-colors">
+            <a
+              href="#inicio"
+              className="font-rajdhani font-semibold text-[14px] text-black/50 uppercase cursor-pointer hover:text-black/70 transition-colors"
+            >
               Início do site
             </a>
           </div>
@@ -676,7 +700,10 @@ export default function Home() {
             <p className="font-rajdhani font-semibold text-[14px] text-black/50 uppercase">
               CNPJ
             </p>
-            <a href="#inicio" className="font-rajdhani font-semibold text-[14px] text-black/50 uppercase cursor-pointer hover:text-black/70 transition-colors">
+            <a
+              href="#inicio"
+              className="font-rajdhani font-semibold text-[14px] text-black/50 uppercase cursor-pointer hover:text-black/70 transition-colors"
+            >
               Início do site
             </a>
           </div>
