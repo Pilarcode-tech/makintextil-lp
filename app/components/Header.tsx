@@ -21,7 +21,10 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
     e.preventDefault();
     setMenuOpen(false);
     const id = href.replace("#", "");
@@ -34,9 +37,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? "bg-[#041f34]/80 backdrop-blur-md"
-          : "bg-[#041f34]"
+        scrolled ? "bg-[#041f34]/80 backdrop-blur-md" : "bg-[#041f34]"
       }`}
     >
       {/* Top Bar */}
@@ -75,10 +76,16 @@ export default function Header() {
             <a
               href="#inicio"
               onClick={(e) => handleClick(e, "#inicio")}
-              className="font-eurostile text-[18px] md:text-[20px] leading-none whitespace-nowrap"
+              className="flex items-center gap-[12px] md:gap-[16px] whitespace-nowrap"
             >
-              <span className="text-white">MAKIN</span>
-              <span className="text-[#0037ff]">TÊXTIL</span>
+              <span className="font-eurostile text-[18px] md:text-[20px] leading-none">
+                <span className="text-white">MAKIN</span>
+                <span className="text-[#0037ff]">TÊXTIL</span>
+              </span>
+              <span className="hidden min-[360px]:flex flex-col font-eurostile text-[7px] md:text-[8px] text-white leading-[1.2] tracking-wide uppercase">
+                <span>Máquinas para</span>
+                <span>Tinturaria Industrial</span>
+              </span>
             </a>
             <nav className="hidden lg:flex items-center gap-[24px] text-[16px] font-normal leading-normal">
               {navLinks.map((link) => (
