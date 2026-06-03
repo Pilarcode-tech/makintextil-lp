@@ -117,7 +117,7 @@ export default function Header() {
                 Whatsapp
               </span>
               <span className="font-medium text-[14px] text-white leading-normal ml-[8px]">
-                (11) 98765-4321
+                +55 11 99848-8438
               </span>
               <Image
                 src="/icons/arrow-up-right.svg"

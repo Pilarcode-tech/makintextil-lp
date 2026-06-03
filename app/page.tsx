@@ -127,7 +127,7 @@ const jsonLd = {
   description:
     "Soluções industriais completas e sob medida para a indústria têxtil. Projetos mecânicos, melhorias de máquinas e engenharia aplicada.",
   url: "https://makintextil.com.br",
-  telephone: "+5511987654321",
+  telephone: "+5511998488438",
   email: "contato@makintextil.com.br",
   address: {
     "@type": "PostalAddress",
@@ -325,7 +325,7 @@ export default function Home() {
                   Whatsapp
                 </span>
                 <span className="font-medium text-[14px] text-[#8c8c8c]">
-                  (11) 98765-4321
+                  +55 11 99848-8438
                 </span>
               </div>
             </div>
@@ -588,7 +588,7 @@ export default function Home() {
                       Fale Conosco
                     </p>
                     <p className="font-menda font-medium text-[14px] text-white uppercase mt-6 md:mt-12">
-                      (11) 98765 - 4321
+                      +55 11 99848-8438
                     </p>
                   </div>
                   <div className="flex flex-col min-w-[140px] sm:min-w-[200px]">
@@ -611,7 +611,7 @@ export default function Home() {
                       Fale conosco pelo whatsapp
                     </p>
                     <p className="font-menda font-medium text-[14px] text-white uppercase mt-6 md:mt-12">
-                      (11) 98765 - 4321
+                      +55 11 99848-8438
                     </p>
                   </div>
                 </div>
